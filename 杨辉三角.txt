@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main() {
+	int N, num, ang[15][15];
+	cin >> N;
+	for (int i = 0; i < N; i++) {
+		cin >> num;
+		for (int j = 1; j <= num; j++) {
+			for (int k = 1; k <= j; k++) {
+				if (k == 1 || k == j) {
+					ang[j][k] = 1;
+				}
+				else {
+					ang[j][k] = ang[j - 1][k - 1] + ang[j - 1][k];
+				}
+			}
+		}
+		for (int l = 1; l <= num; l++) {
+			for (int m = 1; m <= l; m++) {
+				cout << ang[l][m] << " ";
+			}
+			cout << endl;
+		}
+	}
+	return 0;
+}
