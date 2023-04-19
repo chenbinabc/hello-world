@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+const double pai = 3.14;
+
+double dir(double r) {
+	return 2*r;
+}
+double C(double r) {
+	return 2*pai*r;
+}
+double S(double r) {
+	return pai*r*r;
+}
+int main() {
+	double pai = 3.14;
+	double r;
+	cin >> r;
+	cout << "直径=" << dir(r) << endl;
+	cout << "周长=" << C(r) << endl;
+	cout << "面积=" << S(r) << endl;
+	return 0;
+}
