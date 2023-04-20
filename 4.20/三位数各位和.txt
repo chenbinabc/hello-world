@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+class res {
+public:
+	int result,n;
+	int sum(){
+		result = (n % 10) + (n - (n % 10))/10 % 10 + (n / 100);
+		return result;
+	}
+};
+
+int main() {
+	res num;
+	int m;
+	cin >> m;
+	num.n = m;
+	cout << num.sum() << endl;
+	return 0;
+}

@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class res {
+public:
+	int n;
+	string sea[4] = { "Spring","Summer","Autumn","Winter" };
+	string season(){
+		return sea[n-1];
+	}
+};
+
+int main() {
+	res num;
+	int m;
+	cin >> m;
+	num.n = m;
+	
+	cout << num.season() << endl;
+	return 0;
+}

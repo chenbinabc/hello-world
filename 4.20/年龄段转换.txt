@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class res {
+public:
+	int n;
+	string age[6] = { "Children","Teenagers","Youth","middle-aged","Elderly","Old man"};
+	string num(){
+		if (n >= 1 && n < 11) {
+			return age[0];
+		}
+		if (n >= 11 && n < 21) {
+			return age[1];
+		}
+		if (n >= 21 && n < 41) {
+			return age[2];
+		}
+		if (n >= 41 && n < 51) {
+			return age[3];
+		}
+		if (n >= 51 && n < 81) {
+			return age[4];
+		}
+		if (n >=81 && n < 101) {
+			return age[5];
+		}
+	}
+};
+
+int main() {
+	res num;
+	int m;
+	cin >> m;
+	num.n = m;
+	
+	cout << num.num() << endl;
+	return 0;
+}
