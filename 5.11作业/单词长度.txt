@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+class Length {
+public:
+    Length()
+    {
+        show();
+    }
+    void show()
+    {
+        std::string t;
+        while (std::cin >> t)
+        {
+            std::cout << t.length() << " ";
+        }
+    }
+};
+int main()
+{
+    Length n;
+    return 0;
+}
