@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#include<string.h>
+using namespace std;
+int mystrstr(char a[500], char b[500]) {
+	
+	int n=0,k, flag=0;
+	for (int i = 0; i <= strlen(a)-strlen(b); i++) {
+		flag = 0; k = i;
+		for (int j = 0; j < strlen(b); j++, k++) {
+			if (a[k] == b[j]) {
+				flag++;
+			}
+		}
+		if (flag == strlen(b)) {
+			n = i;
+			break;
+		}
+	}
+	return n;
+}
+int main()
+{
+	char a[500], b[500];
+	cin >> a >> b;
+	cout << mystrstr(a, b);
+
+
+	return 0;
+}
